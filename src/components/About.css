@@ -1,0 +1,16 @@
+.About{
+    padding:0px 0px 476px;
+    font-family: cursive;
+    font-size: 20px;
+    justify-content: center;
+    display: inline-block;
+}
+h1,p{
+    text-shadow: -1px -1px 0 #2cc72c,  
+                1px -1px 0 #35c247,  
+               -1px  1px 0 #39c92c,  
+                1px  1px 0 #54e637;
+}
+p{
+    font-size: 30px;
+}

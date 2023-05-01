@@ -1,0 +1,8 @@
+.cards_container{
+    width: 92%;
+    position: flex;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap ;
+    min-height: 1300px;
+}
