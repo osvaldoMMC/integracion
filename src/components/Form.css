@@ -1,0 +1,19 @@
+.contenedor{
+    background-image: url("../../img/fondo-login.jpg");
+    width: 100%;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 50px;
+    font-family: cursive;
+    position: relative;
+    top: 100px;
+    
+}
+.texto{
+    font-size: 30px;
+}
+.error{
+    font-size: 10px;
+}

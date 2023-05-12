@@ -1,16 +1,26 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 
 import Cards from "./components/Cards.jsx";
 import NavBar from "./components/NavBar";
 import Details from "./components/Details";
 import About from "./components/About";
-
+import Form from "./components/Form";
 
 function App() {
   const [characters, setCharacters] = useState([]);
+  const { pathname } = useLocation();
+  const [access, setAccess] =useState(false);
+  const navigate = useNavigate();
+  useEffect(() => {
+    !access && navigate("/");
+  }, [access]);
+
+  const username = "osmamaco@outlook.com";
+  const password = "UPCskf26";
+
 
   function onSearch(id) {
     axios
@@ -34,11 +44,23 @@ function App() {
     setCharacters((oldChars) => {
       return oldChars.filter((ch) => ch.id !== id);
     });
-  }
+  };
+
+  const login=(userData)=>{
+    if(userData.username===username && userData.password===password){
+      setAccess(true);
+      navigate("/home");
+    }else{
+      alert("Credenciales  incorrectas");
+    }
+  };
+
+
   return (
     <div className="App">
-      <NavBar onSearch={onSearch} />
+      {pathname !== "/" && <NavBar onSearch={onSearch} />}
       <Routes>
+        <Route path="/" element={<Form Login = { login } />}/>
         <Route path="/home" element={<Cards onClose={onClose} characters={characters} />} />
         <Route path="/about" element={<About />} />
         <Route path="/details/:id" element={<Details />} />
