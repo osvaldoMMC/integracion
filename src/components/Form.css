@@ -17,3 +17,9 @@
 .error{
     font-size: 10px;
 }
+.suces{
+    font-size: 10px;
+}
+.errors{
+    background-color: red;
+}
