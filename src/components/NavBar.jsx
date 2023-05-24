@@ -12,6 +12,9 @@ export default function NavBar({onSearch}) {
         <Link to="/home">
           <button className='botonLink'>Home</button>
         </Link>
+        <Link to="/favorites">
+          <button className='botonLink'>Favorites</button>
+        </Link>
         <SearchBar onSearch={onSearch} />
     </div>
   )

@@ -20,7 +20,7 @@ export default function Detail() {
 
   return (
     <div>
-        <h1>Detail</h1>
+        <h1>Detail {id}</h1>
         <h2>{character.name}</h2>
         <h2>{character.status}</h2>
         <h2>{character.species}</h2>

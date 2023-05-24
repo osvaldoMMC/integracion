@@ -8,6 +8,7 @@ import NavBar from "./components/NavBar";
 import Details from "./components/Details";
 import About from "./components/About";
 import Form from "./components/Form";
+import Favorites from "./components/Favorites";
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -63,6 +64,7 @@ function App() {
         <Route path="/" element={<Form Login = { login } />}/>
         <Route path="/home" element={<Cards onClose={onClose} characters={characters} />} />
         <Route path="/about" element={<About />} />
+        <Route path="/favorites" element={<Favorites />} />
         <Route path="/details/:id" element={<Details />} />
       </Routes>
     </div>
