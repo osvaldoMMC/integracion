@@ -19,8 +19,8 @@ function App() {
     !access && navigate("/");
   }, [access]);
 
-  const username = "osmamaco@outlook.com";
-  const password = "UPCskf26";
+  const username = "prueba@mail.com";
+  const password = "abcd1234";
 
 
   function onSearch(id) {
